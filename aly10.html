@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اخْتِبَارُ الْفَصْلِ الدِّرَاسِي الأوَّلِ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 5px 0;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function calculateScore() {
+            const answers = {
+                q1: "B",
+                q2: "E",
+                q3: "D",
+                q4: "C",
+                q5: "C",
+                q6: "D",
+                q7: "A",
+                q8: "A",
+                q9: "B",
+                q10: "C"
+            };
+
+            let score = 0;
+            let totalQuestions = Object.keys(answers).length;
+
+            for (let question in answers) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Nilai Anda: ${score} dari ${totalQuestions}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>اخْتِبَارُ الْفَصْلِ الدِّرَاسِي الأوَّلِ</h1>
+        <h2>اخْتَرْ أَصَحَّ إِجَابَةٍ مِنَ الْأَجْوِبَةِ الْآتِيَةِ.</h2>
+
+        <div class="question">
+            <p>1 – محمّدٌ تِلْمِيدٌ جَديدٌ يَتَعَلَّمُ فِي الصَّفِّ الْعَاشِرِ. الْفِعْلُ فِي الْجُمْلَةِ السَّابِقَة …</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> أ- محمد</li>
+                <li><input type="radio" name="q1" value="B"> ب- يَتَعَلَّمُ</li>
+                <li><input type="radio" name="q1" value="C"> ج- تِلْمِيذُ</li>
+                <li><input type="radio" name="q1" value="D"> د- في</li>
+                <li><input type="radio" name="q1" value="E"> ه- جديد</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٢ – يَلْتَقِي الصَّدِيقَان أمامَ الْمَدْرَسَةِ فَيَقُولُ أحَدُهُمَا: صَبَاحُ الْخ َيْر يَا أَخِي، فيُجِيبُ الآخر …</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> أ- عفوا</li>
+                <li><input type="radio" name="q2" value="B"> ب- لا بأس</li>
+                <li><input type="radio" name="q2" value="C"> ج – بخير والحمد لله</li>
+                <li><input type="radio" name="q2" value="D"> د- أهلا بك</li>
+                <li><input type="radio" name="q2" value="E"> هـ – صباح النور</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٣- مُحمَّدٌ الآنَ يَتَعَلَّمُ فِي الصَّفِّ الْعَاشِرِ مِنَ المدرسةِ الثَّانَوِيةِ. الْحَرْفُ فِي الْجُمْلَةِ السَّابِقَة …</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> أ- محمد</li>
+                <li><input type="radio" name="q3" value="B"> ب- يَتَعلَّمُ</li>
+                <li><input type="radio" name="q3" value="C"> ج – الثانوية</li>
+                <li><input type="radio" name="q3" value="D"> د- في</li>
+                <li><input type="radio" name="q3" value="E"> هـ- الآن</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٤- يَلْتَقِي محمدٌ بِصَدِيقِهِ فيقولُ: كَيْفَ الْحَالُ يَا أَخِي، فيُجِيبُ عَنْهُ صَدِيقُه …</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> أ- عفوا</li>
+                <li><input type="radio" name="q4" value="B"> ب- لا بأس</li>
+                <li><input type="radio" name="q4" value="C"> ج- بخير والحمد لله</li>
+                <li><input type="radio" name="q4" value="D"> د- أهلا بك</li>
+                <li><input type="radio" name="q4" value="E"> هـ – صباح النور</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>ه- يُعَرِّفُ الطَّالِبُ نَفْسَهُ فَيَقُول : أَنَا أَخُوكُمْ في اللهِ، اِسْمِي مُحَمَّد … شارع إمام بونجول رقم ٢٥ بَادَانج سومطرة الغَرْبِيَّة.</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> أ- هوايتي</li>
+                <li><input type="radio" name="q5" value="B"> ب- أَمَلِي</li>
+                <li><input type="radio" name="q5" value="C"> ج- عُنُوَانِي</li>
+                <li><input type="radio" name="q5" value="D"> د- ولدت</li>
+                <li><input type="radio" name="q5" value="E"> هـ- تَخَرَّجْتُ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٦- هَذَا صَدِيقِي اسْمُهُ أَحْمَد، إنَّه قادمٌ مِنْ بَالِيكْ بَابَان كَالِيْمَانْتَان …</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> أ- الشَّمالية</li>
+                <li><input type="radio" name="q6" value="B"> ب – الجنوبية</li>
+                <li><input type="radio" name="q6" value="C"> ج- الْوُسْطَى</li>
+                <li><input ```html
+type="radio" name="q6" value="D"> د- الشرقية</li>
+                <li><input type="radio" name="q6" value="E"> هـ – الغربية</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٧- … الْفَطُوْرَ فِي الْمَقْصَفِ عِنْد الاسْتِرَاحَة.</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> أ- نَتَنَاوَلُ</li>
+                <li><input type="radio" name="q7" value="B"> ب- نَلْعَبُ</li>
+                <li><input type="radio" name="q7" value="C"> ج- نَجْتَهدُ</li>
+                <li><input type="radio" name="q7" value="D"> د- نَكْتُبُ</li>
+                <li><input type="radio" name="q7" value="E"> هـ – نَرْجِعُ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٨- يَا أُخْتِي، لَوْ سَمَحْتِ، اِمْسَحِيْ السَّبُوْرَةَ لِنَبْدَأَ الدَّرس، الْفِعْلُ فِي الْجُمْلَةِ السَّابِقَة…</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> أ- امْسَحِي</li>
+                <li><input type="radio" name="q8" value="B"> ب- السبورة</li>
+                <li><input type="radio" name="q8" value="C"> ج- أُخْتِي</li>
+                <li><input type="radio" name="q8" value="D"> د- يا</li>
+                <li><input type="radio" name="q8" value="E"> هـ- الدرس</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>٩ – … مِنَ النَّوْمِ فِي السَّاعَةِ الرَّابِعَةِ قَبْلَ الصُّبْحِ</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> أ- نَغْسِلُ</li>
+                <li><input type="radio" name="q9" value="B"> ب- نَسْتَيْقِظُ</li>
+                <li><input type="radio" name="q9" value="C"> ج- نُنَظِّمُ</li>
+                <li><input type="radio" name="q9" value="D"> د- نُسَافِرُ</li>
+                <li><input type="radio" name="q9" value="E"> هـ- نُسَاعِدُ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>١٠ – عَائِشَةُ … أُمَّهَا عَلَى إِعْدَادِ الطَّعَامِ</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="A"> أ- تَسْتَرِيْحُ</li>
+                <li><input type="radio" name="q10" value="B"> ب- تَدْرُسُ</li>
+                <li><input type="radio" name="q10" value="C"> ج- تُسَاعِدُ</li>
+                <li><input type="radio" name="q10" value="D"> د- تَنَامُ</li>
+                <li><input type="radio" name="q10" value="E"> هـ- تَقْرَأُ</li>
+            </ul>
+        </div>
+
+        <button class="submit-btn" onclick="calculateScore()">Kumpulkan</button>
+        <div class="result" id="result"></div>
+    </div>
+</body>
+</html>

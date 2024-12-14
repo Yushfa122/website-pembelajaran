@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal Bahasa Arab Kelas 2 MI - Bab 1 (أَفْرَادُ الْمَدْرَسَةِ)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Latihan Soal Bahasa Arab Kelas 2 MI</h1>
+        <h2>Bab 1: أَفْرَادُ الْمَدْرَسَةِ</h2>
+        <form id="quizForm">
+            <!-- Soal 1 -->
+            <div class="question">
+                <p>1. Dalam bahasa Arab, ” Siswa putri ” disebut..</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) طَالِبٌ</label>
+                    <label><input type="radio" name="q1" value="B"> B) طَالِبَةٌ</label>
+                    <label><input type="radio" name="q1" value="C"> C) مُدَرِّسٌ</label>
+                </div>
+            </div>
+            <!-- Soal 2 -->
+            <div class="question">
+                <p>2. Arti dari kalimat ” هَذِهِ مَدْرَسَتِيْ ” adalah..</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Ini guru putriku</label>
+                    <label><input type="radio" name="q2" value="B"> B) Ini sekolahku</label>
+                    <label><input type="radio" name="q2" value="C"> C) Ini temanku</label>
+                </div>
+            </div>
+            <!-- Soal 3 -->
+            <div class="question">
+                <p>3. Arti dari kalimat ” المُدَرِّسُ فِي الْفَصْلِ ” adalah..</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) Guru di kelas</label>
+                    <label><input type="radio" name="q3" value="B"> B) Guru di sekolah</label>
+                    <label><input type="radio" name="q3" value="C"> C) Guru di ruang guru</label>
+                </div>
+            </div>
+            <!-- Soal 4 -->
+            <div class="question">
+                <p>4. Arti dari kalimat ” الْبَوَّابُ أَمَامَ الْمَدْرَسَةِ ” adalah..</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) Satpam di dalam sekolah</label>
+                    <label><input type="radio" name="q4" value="B"> B) Satpam di belakang sekolah</label>
+                    <label><input type="radio" name="q4" value="C"> C) Satpam di depan sekolah</label>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <button type="button" class="submit-btn" onClick="checkAnswers()">Submit</button>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        // Kunci jawaban
+        const answers = {
+            q1: "B",
+            q2: "B",
+            q3: "A",
+            q4: "C"
+        };
+
+        function checkAnswers() {
+            const form = document.forms["quizForm"];
+            let correct = 0;
+            let total = Object.keys(answers).length;
+
+            for (let question in answers) {
+                const userAnswer = form[question].value;
+                if (userAnswer === answers[question]) {
+                    correct++;
+                }
+            }
+
+            const result = document.getElementById("result");
+            result.style.display = "block";
+            result.innerHTML = `Kamu menjawab ${correct} dari ${total} soal dengan benar.`;
+        }
+    </script>
+</body>
+</html>

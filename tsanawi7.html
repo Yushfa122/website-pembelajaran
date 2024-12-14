@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Latihan Bahasa Arab Kelas 7 MTs - Bab 1 (التَّعَارُفُ)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 5px 0;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .instructions {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function calculateScore() {
+            const answers = {
+                q1: "A",
+                q2: "D",
+                q3: "B",
+                q4: "D",
+                q5: "C"
+            };
+
+            let score = 0;
+            let totalQuestions = Object.keys(answers).length;
+
+            for (let question in answers) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Nilai Anda: ${score} dari ${totalQuestions}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Soal Latihan Bahasa Arab Kelas 7 MTs Bab 1 (التَّعَارُفُ)</h1>
+        <h2>Berilah tanda silang (X) pada huruf A, B, C, atau D pada jawaban yang paling benar!</h2>
+
+        <div class="instructions">
+            <p>Pilihlah jawaban yang paling tepat dari pilihan yang tersedia.</p>
+        </div>
+
+        <div class="question">
+            <p>1. مَا هَذَا؟</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) هَذَا كِتَابٌ</li>
+                <li><input type="radio" name="q1" value="B"> B) هَذَا مُحَمَّدٌ</li>
+                <li><input type="radio" name="q1" value="C"> C) هَذَا عَلِيٌّ</li>
+                <li><input type="radio" name="q1" value="D"> D) هَذَا حَمِيْدٌ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>2. عمر: مِنْ أَيْنَ أَنْتَ يَا عَلِيُّ؟</p>
+            <p>عَلِيٌّ: أَنَا ـــــــــــــــــــــــــــــ</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) تِلْمِيْذٌ جَدِيْدٌ</li>
+                <li><input type="radio" name="q2" value="B"> B) بِخَيْرٍ وَالْحَمْدُ لِلَّهِ</li>
+                <li><input type="radio" name="q2" value="C"> C) اسْمِيْ عَلِيٌّ</li>
+                <li><input type="radio" name="q2" value="D"> D) مِنْ جَاكَرْتَا</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>3. اِخْتَرِ الْجُمْلَةَ الصَّحِيْحَةَ</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) أَنْتَ فَاطِمَةٌ</li>
+                <li><input type="radio" name="q3" value="B"> B) هُوَ عَلِيٌّ</li>
+                <li><input type="radio" name="q3" value="C"> C) هِيَ عُمَرُ</li>
+                <li><input type="radio" name="q3" value="D"> D) أَنْتِ عُثْمَانَ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>4. اِسْمِيْ ……….، أَنَا طَالِبَةٌ جَدِيْدَةٌ</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) هِشَام</li>
+                <li><input type="radio" name="q4" value="B"> B) عُثْمَانُ</li>
+                <li><input type="radio" name="q4" value="C"> C) إِبْرَاهِيْمُ</li>
+                <li><input type="radio" name="q4" value="D"> D) لَيْلَى</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>5. Susunlah kata-kata berikut menjadi kalimat yang baik!</p>
+            <p>فِيْ – سُوْدِرْمَان – بَيْتِيْ – شَارِعِ – تِسْعَةٍ – رَقْمُ</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) سُوْدِرْمَان فِيْ بَيْتِيْ رَقْمُ تِسْعَةٍ شَارِعِ</li>
+                <li><input type="radio" name="q5" value="B"> B) بَيْتِيْ فِيْ شَارِعِ سُوْدِرْمَان رَقْمُ تِسْعَةٍ</li>
+                <li><input type="radio" name="q5" value="C"> C) بَيْتِيْ رَقْمُ تِسْعَةٍ فِيْ سُوْدِرْمَان</li>
+                <li><input type="radio" name="q5" value="D"> D) رَقْمُ بَيْتِيْ سُوْدِرْمَان شَارِعِ تِسْعَةٍ</li>
+            </ul>
+        </div>
+
+        <button class="submit-btn" onclick="calculateScore()">Kirim Jawaban</button>
+
+        <div id="result" class="result"></div>
+    </div>
+</body>
+</html>

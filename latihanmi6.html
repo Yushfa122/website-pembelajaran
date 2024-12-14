@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Bahasa Arab</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .question span {
+            font-weight: bold;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .score {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>اختبار في اللغة العربية</h1>
+
+        <!-- Question 1 -->
+        <form method="POST">
+            <div class="question">
+                <span>1– أُصَلِّي الْعَصْرَ فِي السَّاعَةِ ……. مَسَاءً</span>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="أ" required> أ) الوَاحِدَةِ</li>
+                    <li><input type="radio" name="q1" value="ب"> ب) الثَّالِثَةِ</li>
+                    <li><input type="radio" name="q1" value="ج"> ج) السَّادِسَةِ</li>
+                    <li><input type="radio" name="q1" value="د"> د) السَّابِعَةِ</li>
+                </ul>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <span>2– يُصَلِّيَ حَمِيْدٌ الظُّهْرَ فِى السَّاعَةِ الْوَاحِدَةِ ـــــــــــــــ</span>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="أ" required> أ) صَبَاحًا</li>
+                    <li><input type="radio" name="q2" value="ب"> ب) نَهَارًا</li>
+                    <li><input type="radio" name="q2" value="ج"> ج) مَسَاءً</li>
+                    <li><input type="radio" name="q2" value="د"> د) لَيْلًا</li>
+                </ul>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <span>3– أَنْتَ ـــــــــــــ إِلَى الْمَدْرَسَةِ فِي السَّاعَةِ السَّادِسَةِ وَالنِّصْفِ صَبَاحًا</span>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="أ" required> أ) تَذْهَبُ</li>
+                    <li><input type="radio" name="q3" value="ب"> ب) تَرْجِعُ</li>
+                    <li><input type="radio" name="q3" value="ج"> ج) يَذْهَبُ</li>
+                    <li><input type="radio" name="q3" value="د"> د) يَرْجِعُ</li>
+                </ul>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <span>4– السَّاعَةُ “الْعَاشِرَةُ اِلَّا عَشْرَ دَقَائِقَ” بِمَعْنَى ـــــــــــــــ</span>
+                <ul class="options">
+                    <li><input type="radio" name="q4" value="أ" required> أ) 10:10</li>
+                    <li><input type="radio" name="q4" value="ب"> ب) 10:50</li>
+                    <li><input type="radio" name="q4" value="ج"> ج) 09:10</li>
+                    <li><input type="radio" name="q4" value="د"> د) 09:50</li>
+                </ul>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <span>5– السَّاعَةُ “السَّادِسَةُ وَالنِّصْفُ” بِمَعْنَى ـــــــــــــــ</span>
+                <ul class="options">
+                    <li><input type="radio" name="q5" value="أ" required> أ) 06:15</li>
+                    <li><input type="radio" name="q5" value="ب"> ب) 06:30</li>
+                    <li><input type="radio" name="q5" value="ج"> ج) 09:15</li>
+                    <li><input type="radio" name="q5" value="د"> د) 09:30</li>
+                </ul>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="submitQuiz()">إرسال الإجابات</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            let score = 0;
+            const totalQuestions = 6;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+
+            const answers = {
+                q1: 'D',
+                q2: 'C',
+                q3: 'B',
+                q4: 'D',
+                q5: 'A',
+                q6: 'C'
+            };
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const question = form.querySelector(`input[name="q${i}"]:checked`);
+                if (question && question.value === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            resultDiv.innerHTML = `النتيجة: ${score} من ${totalQuestions}`;
+            if (score === totalQuestions) {
+                resultDiv.className = 'result correct';
+                resultDiv.innerHTML += '<br>ممتاز! جميع الإجابات صحيحة.';
+            } else {
+                resultDiv.className = 'result incorrect';
+                resultDiv.innerHTML += '<br>الرجاء المحاولة مرة أخرى.';
+            }
+        }
+    </script>
+
+    </div>
+</body>
+</html>

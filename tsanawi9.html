@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Latihan Bahasa Arab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 5px 0;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function calculateScore() {
+            const answers = {
+                q1: "A",
+                q2: "A",
+                q3: "A",
+                q4: "C",
+                q5: "D",
+                q6: "C",
+                q7: "D",
+                q8: "A",
+                q9: "A"
+            };
+
+            let score = 0;
+            let totalQuestions = Object.keys(answers).length;
+
+            for (let question in answers) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Nilai Anda: ${score} dari ${totalQuestions}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Soal Latihan Bahasa Arab</h1>
+        <h2>Berilah tanda silang (X) pada huruf A, B, C, atau D pada jawaban yang paling benar!</h2>
+
+        <div class="question">
+            <p>1. صَالِحَةُ : أُنْظُرِيْ يَا فَاطِمَةُ ! ذٰلِكَ مَسْجِدٌ. فَاطِمَةُ : هَلْ ذٰلِكَ الْمَسْجِدُ كَبِيْرٌ؟ صَالِحَةُ : ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) نَعَمْ، ذٰلِكَ الْمَسْجِدُ كَبِيْرٌ</li>
+                <li><input type="radio" name="q1" value="B"> B) لَا، ذٰلِكَ الْمَسْجِدُ كَبِيْرٌ</li>
+                <li><input type="radio" name="q1" value="C"> C) نَعَمْ، ذٰلِكَ الْمَسْجِدُ صَغِيْرٌ</li>
+                <li><input type="radio" name="q1" value="D"> D) لَا، ذٰلِكَ الْفصْلُ صَغِيْرٌ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>2. Kantor sekolah itu bersih, luas dan indah. تَرْجَمَةُ هٰذِهِ الْجُمْ لَةِ الصَّحِيْحَةِ هِيَ ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) إِدَارَةُ الْمَدْرَسَةِ نَظِيْفٌ، وَ وَاسِعَةٌ، وَ جَمِيْلَةٌ</li>
+                <li><input type="radio" name="q2" value="B"> B) إِدَارَةُ الْمَدْرَسَةِ نَظِيْفَةٌ، وَ وَاسِعٌ، وَ جَمِيْلَةٌ</li>
+                <li><input type="radio" name="q2" value="C"> C) إِدَارَةُ الْمَدْرَسَةِ نَظِيْفَةٌ، وَ وَاسِعَةٌ، وَ جَمِيْلَةٌ</li>
+                <li><input type="radio" name="q2" value="D"> D) إِدَارَةُ الْمَدْرَسَةِ نَظِيْفٌ، وَ وَاسِعٌ، وَ جَمِيْلٌ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>3. ذٰلِكَ الْفَصْلُ أَمَامَ الْمَعْمَلِ. "اَلْخَبَر" مِنْ هٰذَا النَّصِّ هُوَ ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) ذٰلِكَ الْفَصْلُ</li>
+                <li><input type="radio" name="q3" value="B"> B) ذٰلِكَ</li>
+                <li><input type="radio" name="q3" value="C"> C) أَمَامَ الْمَعْمَلِ</li>
+                <li><input type="radio" name="q3" value="D"> D) أَمَامَ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>4. اَلْقَاعةُ جَانِبَ الْمَسْجِدِ. "اَلْمُبْتَدَأ" مِنْ هٰذَا النَّصِّ هُوَ ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) الْمَسْجِدِ</li>
+                <li><input type="radio" name="q4" value="B"> B) جَانِبَ الْمَسْجِدِ</li>
+                <li><input type="radio" name="q4" value="C"> C) اَلْقَاعةُ</li>
+                <li><input type="radio" name="q4" value="D"> D) جَانِبَ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>5. اَلْجُمْلَةُ الصَّحِيْحَةُ مِنْ هٰذِهِ الْجُمَلِ هِيَ ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) اَلْفَصْلُ نَظِيْفَةٌ وَ جَمِيْلٌ</li>
+                <li><input type="radio" name="q5" value="B"> B) الطَّالِبَةُ مَاهِرٌ وَ نَشِيْطٌ</li>
+                <li><input type="radio" name="q5" value="C"> C) اَلْمَكْتَبَةُ وَاسِعٌ وَ كَبِيْرٌ</li>
+                <li><input type="radio" name="q5" value="D"> D) اَلْمَسْجِدُ كَبِيْرٌ وَ جَمِيْلٌ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>6. فِيْ فَصْلِيْ صُوْرَةٌ ... وَ كُ رْسِيٌّ ... وَ سَبُّوْرَةٌ ... اَلنَّعْتُ الصَّحِيْحُ لِيَكُوْنَ جُمْلَةً مُفِيْدَةً، هُوَ ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> A) جَمِيْلَةٌ – مُرَتَّبٌ – كَبِيْرَةٌ</li>
+                <li><input type="radio" name="q6" value="B"> B) جَمِيْلَةٌ – مُرَتَّبَةٌ – كَبِيْرٌ</li>
+                <li><input type="radio" name="q6" value="C"> C) جَمِيْلٌ – مُرَتَّبٌ – كَبِيْرَةٌ</li>
+                <li><input type="radio" name="q6" value="D"> D) جَمِيْلٌ – مُرَتَّبٌ – كَبِيْرٌ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>7. هَذِهِ مَرَافِقُ مَدْرَسِيَّةٌ إِلَّا ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> A) فَصْلٌ</li>
+                <li><input type="radio" name="q7" value="B"> B) حَمَّامٌ</li>
+                <li><input type="radio" name="q7" value="C"> C) بُسْتَانٌ</li>
+                <li><input type="radio" name="q7" value="D"> D) قَلَمٌ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>8. هُوَ صَدِيْقِيْ، اِسْمُهُ سُلَيْماَنُ، هُوَ طَالِبٌ نَشِيْطٌ فِيْ هٰذِهِ الْمَدْرَسَةِ. ضِدُّ الْكَلِمَةِ الَّتِيْ تَحْتَهَا خَطٌّ هُوَ ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> A) كَسْلَانٌ</li>
+                <li><input type="radio" name="q8" value="B"> B) جَاهِلٌ</li>
+                <li><input type="radio" name="q8" value="C"> C) قَبِيْحٌ</li>
+                <li><input type="radio" name="q8" value="D"> D) نَشِيْطَةٌ</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>9. مَدْرَسَتِيْ كَبِيْرَةٌ وَ وَاسِعةٌ وَ جَمِيْلَةٌ تَرْجَمَةُ هٰذِهِ الْجُمْلَةِ الصَّحِيْحَةِ هِيَ ...</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> A) Sekolahku besar, luas dan indah</li>
+                <li><input type="radio" name="q9" value="B"> B) Sekolahku indah, luas dan besar</li>
+                <li><input type="radio" name="q9" value="C"> C) Sekolahku, luas, besar dan indah</li>
+                <li><input type="radio" name="q9" value="D"> D) Sekolahku bersih, luas dan besar</li>
+            </ul>
+        </div>
+
+        <button class="submit-btn" onclick="calculateScore()">Kumpulkan</button>
+        <div class="result" id="result"></div>
+    </div>
+</body>
+</html>

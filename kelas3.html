@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas 1</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .class-box {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .class-box h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .resources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .resource-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 150px;
+            background-color: #e0f7fa;
+            color: #333;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .resource-item:hover {
+            transform: scale(1.05);
+            background-color: #b2ebf2;
+        }
+        .resource-item i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .resource-item span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Materi Kelas 3 </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Materi Kelas 3 </h1>
+        <p>Pilih kategori materi untuk kelas 3:</p>
+
+        <!-- Kotak untuk Kelas 1 -->
+        <div class="class-box">
+            <h2>Kategori Materi</h2>
+            <div class="resources">
+                <a href="https://drive.google.com/drive/folders/13npCkhRd6JkWOmZmy3c83QLn_cWjyBcd?usp=sharing" class="resource-item">
+                    <i class="fas fa-book"></i>
+                    <span>Buku</span>                </a>
+                <!-- Link ke Video YouTube -->
+                <a href="https://youtu.be/1dy4dyzSqkI?si=4jFLb9Y_0fXSi808" target="_blank" class="resource-item">
+                    <i class="fas fa-video"></i>
+                    <span>Video</span>                </a>
+                <a href="kelas1-materi.html" class="resource-item">
+                    <i class="fas fa-folder"></i>
+                    <span>Materi Lainnya</span>                </a>            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Materi Kelas 3 | Interaktif dan Modern</p>
+        </div>
+    </footer>
+</body>
+</html>
